@@ -6,7 +6,6 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTripadvisor } from "react-icons/fa";
 import { FaList } from "react-icons/fa";
-import { TbApps } from "react-icons/tb";
 
 const Home = () => {
     return (
