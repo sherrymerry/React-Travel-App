@@ -42,89 +42,32 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="footerLinks grid">
-                        {/* ye group 1 hai */}
-
                         <div className="linkGroup">
                             <span className="groupTitle">
                                 OUR AGENCY
                             </span>
                             <li className="footerList flex">
-                                <FiChevronRight className='icon' />Partners
-                            </li>
-                            <li className="footerList flex">
-                                <FiChevronRight className='icon' />Bookings
-                            </li>
-                            <li className="footerList flex">
-                                <FiChevronRight className='icon' />Insurance
-                            </li>
-                            <li className="footerList flex">
-                                <FiChevronRight className='icon' />RentCars
+                                <FiChevronRight className='icon' />Our Agency
                             </li>
                             <li className="footerList flex">
                                 <FiChevronRight className='icon' />Services
                             </li>
                             <li className="footerList flex">
-                                <FiChevronRight className='icon' />Tourism
-                            </li>
-                        </div>
-                        {/* ye group  2 hai  */}
-                        <div className="linkGroup">
-                            <span className="groupTitle">
-                                 PARTNER
-                            </span>
-                            <li className="footerList flex">
-                                <FiChevronRight className='icon' />RentCars
-                            </li>
-                            <li className="footerList flex">
-                                <FiChevronRight className='icon' />Bookings
-                            </li>
-                            <li className="footerList flex">
                                 <FiChevronRight className='icon' />Insurance
                             </li>
                             <li className="footerList flex">
-                                <FiChevronRight className='icon' />HostelWorld
+                                <FiChevronRight className='icon' />Agency
                             </li>
                             <li className="footerList flex">
-                                <FiChevronRight className='icon' />Trivago
+                                <FiChevronRight className='icon' />Tourism
                             </li>
                             <li className="footerList flex">
-                                <FiChevronRight className='icon' />TripAdvisor
+                                <FiChevronRight className='icon' />Payment
                             </li>
                         </div>
-                        {/* ye group 3 hai */}
-                        <div className="linkGroup">
-                            <span className="groupTitle">
-                                LAST MINUTES
-                            </span>
-                            <li className="footerList flex">
-                                <FiChevronRight className='icon' />London
-                            </li>
-                            <li className="footerList flex">
-                                <FiChevronRight className='icon' />LasVegas
-                            </li>
-                            <li className="footerList flex">
-                                <FiChevronRight className='icon' />California
-                            </li>
-                            <li className="footerList flex">
-                                <FiChevronRight className='icon' />Europe
-                            </li>
-                            <li className="footerList flex">
-                                <FiChevronRight className='icon' />Maima
-                            </li>
-                            <li className="footerList flex">
-                                <FiChevronRight className='icon' />Cape Town
-                            </li>
-                        </div>
-                        
-                    </div>
-                    <div className="footerDiv flex">
-                        <small>BEST TRAVEL WEBSITE THEME</small>
-                        <small>COPYRIGHTS RESERVERED - SHAHRYAR WASEEN AND HUZAIFA YASEEN (2024) </small>
-
                     </div>
                 </div>
             </div>
-            
         </section>
     )
 }
