@@ -7,6 +7,9 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTripadvisor } from "react-icons/fa";
 import { FaList } from "react-icons/fa";
 import { TbApps } from "react-icons/tb";
+import WOW from 'wowjs';
+import 'animate.css/animate.css';
+import 'wowjs/css/libs/animate.css';
 
 const Home = () => {
     return (
@@ -15,11 +18,11 @@ const Home = () => {
             <video src={video} muted autoPlay loop type="video/mp4"></video>
 
             <div className='homeContent container'>
-                <div className="textDiv">
+                <div className="textDiv wow animate__animated animate__fadeInUp" data-wow-duration="3s" data-wow-delay="3s">
                     <span className="smallText">Our Packages</span>
                     <h1 className="homeTitle">Search Your Holiday</h1>
                 </div>
-                <div className="cardDiv grid">
+                <div className="cardDiv grid wow animate__animated animate__fadeInRight" data-wow-duration="3s" data-wow-delay="3s">
                     <div className="destinationInput">
                         <label htmlFor="city">Search for destination:</label>
                         <div className='input flex'>
