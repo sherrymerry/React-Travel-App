@@ -89,9 +89,6 @@ const Footer = () => {
                             <li className="footerList flex">
                                 <FiChevronRight className='icon' />TripAdvisor
                             </li>
-                            {/* <li className="footerList flex">
-                                <FiChevronRight className='icon' />Payment
-                            </li> */}
                         </div>
 
                         {/* group 2 */}
@@ -114,10 +111,7 @@ const Footer = () => {
                             </li>
                             <li className="footerList flex">
                                 <FiChevronRight className='icon' />Oceania
-                            </li>
-                            {/* <li className="footerList flex">
-                                <FiChevronRight className='icon' />Payment
-                            </li> */}
+                            </li>                     
                         </div>
                     </div>
 
