@@ -2,7 +2,6 @@ import './main.css'
 import WOW from 'wowjs';
 import 'animate.css/animate.css';
 import 'wowjs/css/libs/animate.css';
-// wow animate__animated animate__flipInX
 
 import img1 from "../../assets/img1.jpg";
 import img2 from "../../assets/img2.jpg"
@@ -172,7 +171,7 @@ const Main = () => {
                 </h3>
             </div>
 
-            <div className="secContent grid">
+            <div className="secContent grid wow animate__animated animate__shakeY" data-wow-duration="3s" data-wow-delay="3s">
                 {
                     Data.map(({ id, imgsrc, desttitle, location, grade, fees, description }) => {
                         return (
