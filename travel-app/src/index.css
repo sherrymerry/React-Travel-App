@@ -1,85 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-*{
-  padding:0;
+* {
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins' , sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-:root{
+:root {
   --Primary-color: hsl(199, 100%, 33%);
-  --Secondary-color: hsl(187, 85% ,43%);
-  --gradient-color: linear-gradient(to right, hsl(199, 100%, 33%), hsl(187, 85% ,43%));
-  --white-color: hsl(0, 0% ,100%);
-  --black-color: hsl(201, 33% ,16%);
-  --text-color: hsl(240 ,4% ,36%);
+  --Secondary-color: hsl(187, 85%, 43%);
+  --gradient-color: linear-gradient(to right, hsl(199, 100%, 33%), hsl(187, 85%, 43%));
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(201, 33%, 16%);
+  --text-color: hsl(240, 4%, 36%);
   --whiteColorDream: hsl(0, 0%, 93%);
-  --greyText: rgb(190,190,190);
-  --inputColor: rgb(239,239,239);
-  --bodyColor:rgb(240,240,236);
-  -cardBG: rgb(225,225,235);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 236);
+  -cardBG: rgb(225, 225, 235);
 }
 
-a{
+html {
+  scroll-behavior: smooth;
+}
+
+a {
   text-decoration: none;
 }
 
-li{
+li {
   list-style: none;
 }
 
-.section{
+.section {
   padding: 4rem 0 2 rem;
 }
 
-.container{
+.container {
   padding-left: 1.5 rem;
   padding-right: 1.5 rem;
 }
 
-.icon{
+.icon {
   font-size: 2 rem;
   cursor: pointer;
 }
 
-.flex{
+.flex {
   display: flex;
   align-items: center;
 }
 
-.grid{
+.grid {
   display: grid;
   align-items: center;
 }
 
-.btn{
+.btn {
   padding: .6rem 1.5rem;
   background: var(--gradient-color);
   border-radius: 3rem;
-  border:none;
+  border: none;
   cursor: pointer;
   outline: none;
 }
 
-.btn a{
+.btn a {
   color: var(--white-color);
   font-weight: 500;
 }
 
-.btn:hover{
+.btn:hover {
   background: var(--Secondary-color);
 }
 
-img,video{
+img,
+video {
   width: 100%;
   height: auto;
 }
-input{
+
+input {
   font-size: 100%;
 }
 
-body{
+body {
   background: var(--bodyColor);
 }
 
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 80% !important;
+    margin: auto !important;
+  }
+
+  .section {
+    padding: 6rem 0 4rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
+  }
+
+}

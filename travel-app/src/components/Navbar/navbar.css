@@ -113,3 +113,61 @@
         }
     }
 }
+
+@media screen and(min-width: 769px) {
+
+    .toggleNavbar,
+    .closeNavbar {
+        display: none;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+
+        .navBar {
+            .navLists {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+
+                .navItem {
+                    .navLink {
+                        color: var(--text-color);
+                        padding: 0 0.45rem;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+
+                        &:hover {
+                            color: var(--Primary-color);
+
+                        }
+
+                    }
+                }
+
+                .btn {
+                    margin-left: 1rem;
+
+                    a {
+                        color: var(--white-color);
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .header {
+        .navBar {
+            .navLists {
+                .navItem {
+                    padding: 0 0.7rem;
+                }
+            }
+        }
+    }
+
+}
