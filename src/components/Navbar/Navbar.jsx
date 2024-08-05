@@ -30,21 +30,15 @@ const Navbar = () => {
                         <li className='navItem'>
                             <a href="#" className="navLinks">Home</a>
                         </li>
+                        
                         <li className='navItem'>
                             <a href="#" className="navLinks">Packages</a>
                         </li>
-                        <li className='navItem'>
-                            <a href="#" className="navLinks">Shop</a>
-                        </li>
+                        
                         <li className='navItem'>
                             <a href="#" className="navLinks">About</a>
                         </li>
-                        <li className='navItem'>
-                            <a href="#" className="navLinks">Pages</a>
-                        </li>
-                        <li className='navItem'>
-                            <a href="#" className="navLinks">News</a>
-                        </li>
+                       
                         <li className='navItem'>
                             <a href="#" className="navLinks">Contact</a>
                         </li>
