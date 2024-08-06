@@ -198,7 +198,7 @@ const Main = () => {
                                         <p>{description}</p>
                                     </div>
 
-                                    <button className='btn flex'>DETAILS <HiOutlineClipboardCheck className='icon' /></button>
+                                    <button className='btn flex'>BOOK NOW <HiOutlineClipboardCheck className='icon' /></button>
 
                                 </div>
                             </div>

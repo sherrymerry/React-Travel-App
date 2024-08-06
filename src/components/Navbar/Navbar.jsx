@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import './navbar.css'
+import { Link } from 'react-router-dom';
+import './navbar.css';
+// import Packages from './Navbarlinks/Packages';
+// import About from './Navbarlinks/About';
+// import Contact from './Navbarlinks/Contact'
 import { MdOutlineTravelExplore } from "react-icons/md";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
@@ -8,11 +12,11 @@ const Navbar = () => {
     const [active, setActive] = useState('navBar');
 
     const showNav = () => {
-        setActive('navBar activeNavbar')
+        setActive('navBar activeNavbar');
     }
 
     const removeNavbar = () => {
-        setActive('navBar')
+        setActive('navBar');
     }
 
     return (
@@ -20,29 +24,25 @@ const Navbar = () => {
             <header className='header flex'>
 
                 <div className='logoDiv'>
-                    <a href="#" className='logo flex'>
+                    <Link to="/" className='logo flex'>
                         <h1><MdOutlineTravelExplore className='icon' />Travel.</h1>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className={active}>
                     <ul className='navLists flex'>
                         <li className='navItem'>
-                            <a href="#" className="navLinks">Home</a>
+                            <Link to="/" className="navLinks">Home</Link>
                         </li>
-                        
                         <li className='navItem'>
-                            <a href="#" className="navLinks">Packages</a>
+                            <Link to="/packages" className="navLinks">Packages</Link>
                         </li>
-                        
                         <li className='navItem'>
-                            <a href="#" className="navLinks">About</a>
+                            <Link to="/about" className="navLinks">About</Link>
                         </li>
-                       
                         <li className='navItem'>
-                            <a href="#" className="navLinks">Contact</a>
+                            <Link to="/contact" className="navLinks">Contact</Link>
                         </li>
-
                         <button className='btn'>
                             <a href="#">BOOK NOW</a>
                         </button>
@@ -56,10 +56,9 @@ const Navbar = () => {
                 <div onClick={showNav} className="toggleNavbar">
                     <TbGridDots className='icon' />
                 </div>
-
             </header>
         </section>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;

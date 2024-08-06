@@ -1,0 +1,84 @@
+:root {
+    --Primary-color: hsl(199, 100%, 33%);
+    --Secondary-color: hsl(187, 85%, 43%);
+    --gradient-color: linear-gradient(to right, hsl(199, 100%, 33%), hsl(187, 85%, 43%));
+    --reverse-gradient-color: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(201, 33%, 16%);
+    --text-color: hsl(240, 4%, 36%);
+    --whiteColorDream: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 236);
+    -cardBG: rgb(225, 225, 235);
+}
+
+.contact {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    background: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+}
+
+.contact-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--reverse-gradient-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.input-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.submit-button {
+    background: var(--gradient-color);
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 10px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background: var(--reverse-gradient-color);
+}

@@ -64,7 +64,7 @@
                 .navItem {
                     padding: .5rem 0;
 
-                    .navLink {
+                    .navLinks {
                         color: var(--text-color);
                         font-size: .9rem;
                         font-weight: 600;

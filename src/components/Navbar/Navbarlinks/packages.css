@@ -11,10 +11,9 @@
     --bodyColor: rgb(240, 240, 236);
     --cardBG: rgb(225, 225, 235);
     --cardHover: rgb(255, 255, 255);
-
 }
 
-.main {
+.packages {
     width: 100%;
 
     .sectitle {
@@ -42,7 +41,7 @@
         justify-content: center;
         gap: 1.5rem;
 
-        .singleDestination {
+        .singlePackage {
             height: 100%;
             display: grid;
             row-gap: 10px;
@@ -69,7 +68,6 @@
                     width: 100%;
                     object-fit: cover;
                     transition: 2s ease;
-
                 }
 
                 &:hover {
@@ -82,10 +80,9 @@
             .cardInfo {
                 padding: 1rem;
 
-                .disttitle {
+                .desttitle {
                     font-size: 1.25rem;
                     color: var(--black-color);
-
                 }
 
                 .continent {
@@ -103,40 +100,25 @@
                     }
                 }
 
-                .fees {
-                    width: 100%;
-                    padding: 1rem;
-                    justify-content: space-between;
+                .packageDetails {
                     margin: 1rem 0;
-                    border-top: 1.5px solid var(--greyText);
-                    border-bottom: 1.5px solid var(--greyText);
-
-                    .grade {
-                        color: var(--text-color);
-                        max-width: 100px;
-                        line-height: 20px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-                        small {
-                            text-align: center;
-                            background: var(--gradient-color);
-                            border-radius: 1rem;
-                            padding: 1px 10px;
-                            color: var(--white-color);
-                            font-size: 10px;
-
-                        }
-                    }
 
                     .price {
-                        font-size: 30px;
-                        font-weight: 800;
-                        color: var(--black-color);
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 0.5rem;
+                        font-size: 18px;
 
+                        .originalPrice {
+                            text-decoration: line-through;
+                            color: var(--greyText);
+                        }
+
+                        .discountedPrice {
+                            color: var(--black-color);
+                            font-weight: bold;
+                        }
                     }
-
                 }
 
                 .desc {
@@ -159,8 +141,6 @@
                 }
             }
         }
-
-
     }
 }
 
@@ -174,13 +154,11 @@
     }
 
     .secContent {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
 
-        .singleDestination {
+        .singlePackage {
             height: auto;
-
         }
-
     }
 }
 
@@ -188,11 +166,8 @@
     .secContent {
         grid-template-columns: repeat(2, 1fr);
 
-        .singleDestination {
+        .singlePackage {
             height: auto;
-
         }
-
     }
-
 }
