@@ -1,7 +1,9 @@
 import './main.css'
+import { Link } from 'react-router-dom';
 import WOW from 'wowjs';
 import 'animate.css/animate.css';
 import 'wowjs/css/libs/animate.css';
+import { useCart } from '../contexts/CartContext';
 
 import img1 from "../../assets/img1.jpg";
 import img2 from "../../assets/img2.jpg"
@@ -20,7 +22,7 @@ import img14 from "../../assets/img14.jpeg"
 import img15 from "../../assets/img15.jpeg"
 
 import { HiOutlineLocationMarker } from "react-icons/hi";
-import { HiOutlineClipboardCheck } from "react-icons/hi";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Data = [
     {
@@ -29,7 +31,7 @@ const Data = [
         desttitle: "Paris",
         location: "France",
         grade: "Cultural-Relax",
-        fees: "$1200",
+        discountedPrice: "$1200",
         description: "Experience the city of love with its rich history, art, and fashion."
     },
     {
@@ -38,7 +40,7 @@ const Data = [
         desttitle: "Tokyo",
         location: "Japan",
         grade: "Cultural-Relax",
-        fees: "$1500",
+        discountedPrice: "$1500",
         description: "Explore the vibrant city blending tradition with futuristic technology."
     },
     {
@@ -47,7 +49,7 @@ const Data = [
         desttitle: "New York City",
         location: "USA",
         grade: "Cultural-Relax",
-        fees: "$1300",
+        discountedPrice: "$1300",
         description: "Visit the city that never sleeps, famous for its skyline and cultural diversity."
     },
     {
@@ -56,7 +58,7 @@ const Data = [
         desttitle: "Sydney",
         location: "Australia",
         grade: "Cultural-Relax",
-        fees: "$1400",
+        discountedPrice: "$1400",
         description: "Discover the stunning Sydney Opera House and beautiful beaches."
     },
     {
@@ -65,7 +67,7 @@ const Data = [
         desttitle: "Cape Town",
         location: "South Africa",
         grade: "Cultural-Relax",
-        fees: "$1100",
+        discountedPrice: "$1100",
         description: "Enjoy breathtaking landscapes and rich cultural heritage."
     },
     {
@@ -74,7 +76,7 @@ const Data = [
         desttitle: "Rome",
         location: "Italy",
         grade: "Cultural-Relax",
-        fees: "$1250",
+        discountedPrice: "$1250",
         description: "Immerse yourself in ancient history and magnificent architecture."
     },
     {
@@ -83,7 +85,7 @@ const Data = [
         desttitle: "London",
         location: "UK",
         grade: "Cultural-Relax",
-        fees: "$1350",
+        discountedPrice: "$1350",
         description: "Experience the royal charm and modern attractions of London."
     },
     {
@@ -92,7 +94,7 @@ const Data = [
         desttitle: "Dubai",
         location: "UAE",
         grade: "Cultural-Relax",
-        fees: "$1600",
+        discountedPrice: "$1600",
         description: "Marvel at the luxurious lifestyle and futuristic skyscrapers."
     },
     {
@@ -101,7 +103,7 @@ const Data = [
         desttitle: "Rio de Janeiro",
         location: "Brazil",
         grade: "Cultural-Relax",
-        fees: "$1000",
+        discountedPrice: "$1000",
         description: "Enjoy the vibrant culture and stunning beaches of Rio."
     },
     {
@@ -110,7 +112,7 @@ const Data = [
         desttitle: "Istanbul",
         location: "Turkey",
         grade: "Cultural-Relax",
-        fees: "$1150",
+        discountedPrice: "$1150",
         description: "Explore the city where East meets West with its rich history and culture."
     },
     {
@@ -119,7 +121,7 @@ const Data = [
         desttitle: "Bangkok",
         location: "Thailand",
         grade: "Cultural-Relax",
-        fees: "$1050",
+        discountedPrice: "$1050",
         description: "Discover the vibrant street life and beautiful temples of Bangkok."
     },
     {
@@ -128,7 +130,7 @@ const Data = [
         desttitle: "Amsterdam",
         location: "Netherlands",
         grade: "Cultural-Relax",
-        fees: "$1300",
+        discountedPrice: "$1300",
         description: "Enjoy the picturesque canals and rich artistic heritage."
     },
     {
@@ -137,7 +139,7 @@ const Data = [
         desttitle: "Singapore",
         location: "Singapore",
         grade: "Cultural-Relax",
-        fees: "$1450",
+        discountedPrice: "$1450",
         description: "Experience the modern skyline and lush gardens of Singapore."
     },
     {
@@ -146,7 +148,7 @@ const Data = [
         desttitle: "Barcelona",
         location: "Spain",
         grade: "Cultural-Relax",
-        fees: "$1200",
+        discountedPrice: "$1200",
         description: "Admire the unique architecture and vibrant culture of Barcelona."
     },
     {
@@ -155,34 +157,31 @@ const Data = [
         desttitle: "Cairo",
         location: "Egypt",
         grade: "Cultural-Relax",
-        fees: "$1100",
+        discountedPrice: "$1100",
         description: "Explore the ancient wonders of the Pyramids and the Nile."
     }
 ];
 
-
 const Main = () => {
+    const { addToCart } = useCart();
+
     return (
         <section className="main container section">
-
             <div className="sectitle">
-                <h3 className="title">
-                    Most Visited destinations
-                </h3>
+                <h3 className="title">Most Visited Destinations</h3>
             </div>
-
             <div className="secContent grid wow animate__animated animate__shakeY" data-wow-duration="3s" data-wow-delay="3s">
                 {
-                    Data.map(({ id, imgsrc, desttitle, location, grade, fees, description }) => {
+                    Data.map(({ id, imgsrc, desttitle, location, grade, discountedPrice, description }) => {
                         return (
                             <div key={id} className="singleDestination">
-
                                 <div className="imageDiv">
                                     <img src={imgsrc} alt={desttitle} />
                                 </div>
                                 <div className="cardInfo">
                                     <h4 className='desttitle'>{desttitle}</h4>
-                                    <span className="continent flex"><HiOutlineLocationMarker className='icon' />
+                                    <span className="continent flex">
+                                        <HiOutlineLocationMarker className='icon' />
                                         <span className="name">{location}</span>
                                     </span>
                                     <div className="fees flex">
@@ -190,24 +189,23 @@ const Main = () => {
                                             <span>{grade}<small>+1</small></span>
                                         </div>
                                         <div className="price">
-                                            <h5>{fees}</h5>
+                                            <h5>{discountedPrice}</h5>
                                         </div>
                                     </div>
-
                                     <div className="desc">
                                         <p>{description}</p>
                                     </div>
-
-                                    <button className='btn flex'>BOOK NOW <HiOutlineClipboardCheck className='icon' /></button>
-
+                                    <button onClick={() => addToCart({ id, imgsrc, title: desttitle, price: discountedPrice })} className='btn flex'>
+                                        ADD TO CART <FaShoppingCart className='icon' />
+                                    </button>
                                 </div>
                             </div>
-                        )
+                        );
                     })
                 }
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Main
+export default Main;

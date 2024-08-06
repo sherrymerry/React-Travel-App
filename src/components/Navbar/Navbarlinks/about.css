@@ -2,6 +2,7 @@
     --Primary-color: hsl(199, 100%, 33%);
     --Secondary-color: hsl(187, 85%, 43%);
     --gradient-color: linear-gradient(to right, hsl(199, 100%, 33%), hsl(187, 85%, 43%));
+    --reverse-gradient-color: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
     --white-color: hsl(0, 0%, 100%);
     --black-color: hsl(201, 33%, 16%);
     --text-color: hsl(240, 4%, 36%);

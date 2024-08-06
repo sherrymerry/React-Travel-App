@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './packages.css';
 import WOW from 'wowjs';
 import 'animate.css/animate.css';
 import 'wowjs/css/libs/animate.css';
+import { useCart } from '../../contexts/CartContext';
+
 import img16 from "../../../assets/img16.jpeg";
 import img17 from "../../../assets/img17.jpeg";
 import img18 from "../../../assets/img18.jpeg";
@@ -10,15 +13,14 @@ import img19 from "../../../assets/img19.jpeg";
 import img20 from "../../../assets/img20.jpeg";
 import img21 from "../../../assets/img21.jpeg";
 
-
 import { HiOutlineLocationMarker } from "react-icons/hi";
-import { HiOutlineClipboardCheck } from "react-icons/hi";
+import { FaShoppingCart } from "react-icons/fa";
 
 const bestPackages = [
     {
         id: 16,
-        img: img16,
-        destination: "Switzerland",
+        imgsrc: img16,
+        desttitle: "Switzerland",
         to: "Europe",
         packages: "7 days / 6 nights",
         originalPrice: "$2500",
@@ -27,8 +29,8 @@ const bestPackages = [
     },
     {
         id: 17,
-        img: img17,
-        destination: "China",
+        imgsrc: img17,
+        desttitle: "China",
         to: "Asia",
         packages: "10 days / 9 nights",
         originalPrice: "$2200",
@@ -37,8 +39,8 @@ const bestPackages = [
     },
     {
         id: 18,
-        img: img18,
-        destination: "Pakistan",
+        imgsrc: img18,
+        desttitle: "Pakistan",
         to: "Asia",
         packages: "8 days / 7 nights",
         originalPrice: "$1500",
@@ -47,8 +49,8 @@ const bestPackages = [
     },
     {
         id: 19,
-        img: img19,
-        destination: "Miami",
+        imgsrc: img19,
+        desttitle: "Miami",
         to: "USA",
         packages: "9 days / 8 nights",
         originalPrice: "$2700",
@@ -57,8 +59,8 @@ const bestPackages = [
     },
     {
         id: 20,
-        img: img20,
-        destination: "Maldives",
+        imgsrc: img20,
+        desttitle: "Maldives",
         to: "Indian Ocean",
         packages: "9 days / 8 nights",
         originalPrice: "$2100",
@@ -67,8 +69,8 @@ const bestPackages = [
     },
     {
         id: 21,
-        img: img21,
-        destination: "Kyoto",
+        imgsrc: img21,
+        desttitle: "Kyoto",
         to: "Japan",
         packages: "9 days / 8 nights",
         originalPrice: "$2500",
@@ -78,6 +80,7 @@ const bestPackages = [
 ];
 
 const Packages = () => {
+    const { addToCart } = useCart();
     return (
         <section className="packages container section">
 
@@ -89,15 +92,15 @@ const Packages = () => {
 
             <div className="secContent grid wow animate__animated animate__fadeInUp" data-wow-duration="3s" data-wow-delay="1s">
                 {
-                    bestPackages.map(({ id, img, destination, to, packages, originalPrice, discountedPrice, details }) => {
+                    bestPackages.map(({ id, imgsrc, desttitle, to, packages, originalPrice, discountedPrice, details }) => {
                         return (
                             <div key={id} className="singlePackage">
 
                                 <div className="imageDiv">
-                                    <img src={img} alt={destination} />
+                                    <img src={imgsrc} alt={desttitle} />
                                 </div>
                                 <div className="cardInfo">
-                                    <h4 className='desttitle'>{destination}</h4>
+                                    <h4 className='desttitle'>{desttitle}</h4>
                                     <span className="continent flex"><HiOutlineLocationMarker className='icon' />
                                         <span className="name">{to}</span>
                                     </span>
@@ -112,9 +115,8 @@ const Packages = () => {
                                     <div className="desc">
                                         <p>{details}</p>
                                     </div>
-
-                                    <button className='btn flex'>BOOK NOW <HiOutlineClipboardCheck className='icon' /></button>
-
+                                    {/* <Link to={`/packages/product/${id}`} className='btn flex'>BOOK NOW <HiOutlineClipboardCheck className='icon' /></Link> */}
+                                    <button onClick={() => addToCart({ id, imgsrc, title: desttitle, price: discountedPrice })} className='btn flex'>ADD TO CART <FaShoppingCart className ='icon' /> </button>
                                 </div>
                             </div>
                         )

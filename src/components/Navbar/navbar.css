@@ -2,6 +2,7 @@
     --Primary-color: hsl(199, 100%, 33%);
     --Secondary-color: hsl(187, 85%, 43%);
     --gradient-color: linear-gradient(to right, hsl(199, 100%, 33%), hsl(187, 85%, 43%));
+    --reverse-gradient-color: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
     --white-color: hsl(0, 0%, 100%);
     --black-color: hsl(201, 33%, 16%);
     --text-color: hsl(240, 4%, 36%);
@@ -170,4 +171,73 @@
         }
     }
 
+}
+
+.cartContainer {
+    position: relative;
+}
+
+.cartBtn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 5px;
+    border: none;
+}
+
+.cartIcon {
+    font-size: 2rem;
+    color: var(--gradient-color);
+}
+
+.cartCount {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--Primary-color);
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+.cartPopup {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.cartPopupContent {
+    padding: 1rem;
+}
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cartItem img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.itemDetails {
+    flex: 1;
+}
+
+
+.cartFooter {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
 }

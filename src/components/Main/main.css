@@ -151,6 +151,7 @@
                     justify-content: space-between;
                     gap: .5rem;
                     font-weight: 600;
+                    max-width: 170px;
 
                     .icon {
                         font-size: 18px;
