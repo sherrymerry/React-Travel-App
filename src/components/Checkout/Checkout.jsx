@@ -19,8 +19,6 @@ const Checkout = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log("Form Data Submitted", formData);
     };
 
     return (
@@ -72,9 +70,13 @@ const Checkout = () => {
                     >
                         <option value="creditCard">Credit Card</option>
                         <option value="paypal">PayPal</option>
+                        <option value="paypal">Pioneer</option>
+                        <option value="paypal">Skrill</option>
+                        <option value="paypal">Local Bank Transfer</option>
+
                     </select>
                 </div>
-                <button type="submit" className="submitBtn">Place Order</button>
+                <button type="submit" className="submitBtn"> <a href="src/assets/thanks.png"> Place Order </a></button>
             </form>
         </section>
     );
