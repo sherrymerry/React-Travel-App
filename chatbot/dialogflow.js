@@ -31,7 +31,7 @@ function booking(agent) {
     rooms = parameters.rooms;
     
     agent.add(`🌟 **Awesome!** Here's your booking summary:
-
+        
 🗺️ Destination: ${to}  
 🌆 Departure from: ${from}  
 👥 Traveling with: ${people} persons  

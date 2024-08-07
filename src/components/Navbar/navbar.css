@@ -76,14 +76,6 @@
                     }
                 }
 
-                .btn {
-                    margin-top: 1rem;
-
-                    a {
-                        font-weight: 600;
-                        color: var(--white-color);
-                    }
-                }
             }
 
             .closeNavbar {
@@ -147,14 +139,6 @@
                     }
                 }
 
-                .btn {
-                    margin-left: 1rem;
-
-                    a {
-                        color: var(--white-color);
-                        font-weight: 500;
-                    }
-                }
             }
         }
     }

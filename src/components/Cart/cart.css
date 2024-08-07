@@ -19,6 +19,8 @@
 
 .sectitle {
     margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin: 25px;
 }
 
 .title {
@@ -57,10 +59,6 @@
     font-weight: bold;
 }
 
-/* .quantity {
-    font-size: 1rem;
-} */
-
 .removeBtn {
     background: var(--gradient-color);
     color: #fff;
@@ -76,6 +74,7 @@
 
 .total {
     margin-top: 1rem;
+    margin: 25px;
     font-size: 1.2rem;
     font-weight: bold;
 }

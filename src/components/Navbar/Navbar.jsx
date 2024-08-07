@@ -48,9 +48,7 @@ const Navbar = () => {
                         <li className='navItem'>
                             <Link to="/contact" className="navLinks">Contact</Link>
                         </li>
-                        <button className='btn'>
-                            <a href="#">BOOK NOW <HiOutlineClipboardCheck className='icon'/></a>
-                        </button>
+                       
                         <div className='cartContainer'>
                             <button className='cartBtn' onClick={goToCart}>
                                 <FaShoppingCart className='cartIcon' />
