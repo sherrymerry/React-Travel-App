@@ -1,8 +1,5 @@
 import React from "react";
 import './about.css';
-import WOW from 'wowjs';
-import 'animate.css/animate.css';
-import 'wowjs/css/libs/animate.css';
 import { FaGlobe, FaMapMarkedAlt, FaPlane } from 'react-icons/fa';
 
 const About = () => {

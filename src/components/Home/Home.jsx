@@ -7,9 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTripadvisor } from "react-icons/fa";
 import { FaList } from "react-icons/fa";
 import { TbApps } from "react-icons/tb";
-import WOW from 'wowjs';
-import 'animate.css/animate.css';
-import 'wowjs/css/libs/animate.css';
+
 
 const Home = () => {
     return (

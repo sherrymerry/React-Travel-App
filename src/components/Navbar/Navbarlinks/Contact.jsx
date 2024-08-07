@@ -1,8 +1,5 @@
 import React from 'react';
 import './contact.css';
-import WOW from 'wowjs';
-import 'animate.css/animate.css';
-import 'wowjs/css/libs/animate.css';
 
 const Contact = () => {
 
