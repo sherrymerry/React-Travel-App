@@ -158,46 +158,50 @@ const Data = [
     }
 ];
 
-const Main = () => {
+const Main = ({ searchQuery }) => {
     const { addToCart } = useCart();
 
+    const filteredData = Data.filter(
+        ({ desttitle, location }) =>
+            desttitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            location.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    
     return (
         <section className="main container section">
             <div className="sectitle">
                 <h3 className="title">Most Visited Destinations</h3>
             </div>
             <div className="secContent grid wow animate__animated animate__shakeY" data-wow-duration="3s" data-wow-delay="3s">
-                {
-                    Data.map(({ id, imgsrc, desttitle, location, grade, discountedPrice, description }) => {
-                        return (
-                            <div key={id} className="singleDestination">
-                                <div className="imageDiv">
-                                    <img src={imgsrc} alt={desttitle} />
-                                </div>
-                                <div className="cardInfo">
-                                    <h4 className='desttitle'>{desttitle}</h4>
-                                    <span className="continent flex">
-                                        <HiOutlineLocationMarker className='icon' />
-                                        <span className="name">{location}</span>
-                                    </span>
-                                    <div className="fees flex">
-                                        <div className="grade">
-                                            <span>{grade}<small>+1</small></span>
-                                        </div>
-                                        <div className="price">
-                                            <h5>${discountedPrice}</h5>
-                                        </div>
-                                    </div>
-                                    <div className="desc">
-                                        <p>{description}</p>
-                                    </div>
-                                    <button onClick={() => addToCart({ id, imgsrc, title: desttitle, price: discountedPrice })} className='btn flex'>
-                                        BOOK NOW <FaShoppingCart className='icon' />
-                                    </button>
-                                </div>
+            {
+                    filteredData.map(({ id, imgsrc, desttitle, location, grade, discountedPrice, description }) => (
+                        <div key={id} className="singleDestination">
+                            <div className="imageDiv">
+                                <img src={imgsrc} alt={desttitle} />
                             </div>
-                        );
-                    })
+                            <div className="cardInfo">
+                                <h4 className='desttitle'>{desttitle}</h4>
+                                <span className="continent flex">
+                                    <HiOutlineLocationMarker className='icon' />
+                                    <span className="name">{location}</span>
+                                </span>
+                                <div className="fees flex">
+                                    <div className="grade">
+                                        <span>{grade}<small>+1</small></span>
+                                    </div>
+                                    <div className="price">
+                                        <h5>${discountedPrice}</h5>
+                                    </div>
+                                </div>
+                                <div className="desc">
+                                    <p>{description}</p>
+                                </div>
+                                <button onClick={() => addToCart({ id, imgsrc, title: desttitle, price: discountedPrice })} className='btn flex'>
+                                    BOOK NOW <FaShoppingCart className='icon' />
+                                </button>
+                            </div>
+                        </div>
+                    ))
                 }
             </div>
         </section>
@@ -205,4 +209,3 @@ const Main = () => {
 };
 
 export default Main;
-

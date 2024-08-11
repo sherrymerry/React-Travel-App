@@ -1,4 +1,5 @@
-import './home.css'
+import React, { useState } from 'react';
+import './home.css';
 import video from "../../assets/video.mp4";
 import { GrLocation } from "react-icons/gr";
 import { HiFilter } from "react-icons/hi";
@@ -8,8 +9,14 @@ import { FaTripadvisor } from "react-icons/fa";
 import { FaList } from "react-icons/fa";
 import { TbApps } from "react-icons/tb";
 
+const Home = ({ onSearch }) => {
+    const [searchQuery, setSearchQuery] = useState('');
 
-const Home = () => {
+    const handleSearchChange = (event) => {
+        setSearchQuery(event.target.value);
+        onSearch(event.target.value);
+    };
+
     return (
         <section className='home'>
             <div className="overlay">  </div>
@@ -24,7 +31,12 @@ const Home = () => {
                     <div className="destinationInput">
                         <label htmlFor="city">Search for destination:</label>
                         <div className='input flex'>
-                            <input type="text" placeholder='Enter name here....' />
+                            <input
+                                type="text"
+                                placeholder='Enter name here....'
+                                value={searchQuery}
+                                onChange={handleSearchChange}
+                            />
                             <GrLocation className='icon' />
                         </div>
                     </div>
@@ -33,11 +45,10 @@ const Home = () => {
                         <label htmlFor="date">Search for date:</label>
                         <div className='input flex'>
                             <input type="date" />
-
                         </div>
                     </div>
 
-                    <div className="priceInput">
+                    {/* <div className="priceInput">
                         <div className="label_total flex">
                             <label htmlFor="price">Max price...</label>
                             <h3 className='total'>$5000</h3>
@@ -45,7 +56,8 @@ const Home = () => {
                         <div className="input flex">
                             <input type="range" max="5000" min="1000" />
                         </div>
-                    </div>
+                    </div> */}
+                    
                     <div className="searchOptions flex">
                         <HiFilter className='icon' />
                         <span>MORE FILTERS</span>
@@ -56,7 +68,6 @@ const Home = () => {
                         <FaFacebookF className='icon' />
                         <FaInstagram className='icon' />
                         <FaTripadvisor className='icon' />
-
                     </div>
                     <div className="leftIcons">
                         <FaList className='icon' />
@@ -64,9 +75,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
         </section>
-    )
+    );
 }
 
-export default Home
+export default Home;

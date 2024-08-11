@@ -86,7 +86,7 @@
             }
 
             .label_total {
-                justify-content: space-between;
+                justify-content: space-around;
                 align-items: center;
 
                 .total {
