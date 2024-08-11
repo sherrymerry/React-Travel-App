@@ -111,7 +111,7 @@ const Packages = () => {
                                     <div className="desc">
                                         <p>{details}</p>
                                     </div>
-                                    <button onClick={() => addToCart({ id, imgsrc, title: desttitle, price: discountedPrice })} className='btn flex'>ADD TO CART <FaShoppingCart className='icon' /> </button>
+                                    <button onClick={() => addToCart({ id, imgsrc, title: desttitle, price: discountedPrice })} className='btn flex'>BOOK NOW <FaShoppingCart className='icon' /> </button>
                                 </div>
                             </div>
                         )

@@ -192,7 +192,7 @@ const Main = () => {
                                         <p>{description}</p>
                                     </div>
                                     <button onClick={() => addToCart({ id, imgsrc, title: desttitle, price: discountedPrice })} className='btn flex'>
-                                        ADD TO CART <FaShoppingCart className='icon' />
+                                        BOOK NOW <FaShoppingCart className='icon' />
                                     </button>
                                 </div>
                             </div>
