@@ -17,7 +17,7 @@ const bestPackages = [
         id: 16,
         imgsrc: img16,
         desttitle: "Switzerland",
-        to: "Europe",
+        location: "Europe",
         packages: "7 days / 6 nights",
         originalPrice: "$2500",
         discountedPrice: "2000",
@@ -27,7 +27,7 @@ const bestPackages = [
         id: 17,
         imgsrc: img17,
         desttitle: "China",
-        to: "Asia",
+        location: "Asia",
         packages: "10 days / 9 nights",
         originalPrice: "$2200",
         discountedPrice: "1800",
@@ -37,7 +37,7 @@ const bestPackages = [
         id: 18,
         imgsrc: img18,
         desttitle: "Pakistan",
-        to: "Asia",
+        location: "Asia",
         packages: "8 days / 7 nights",
         originalPrice: "$1500",
         discountedPrice: "1200",
@@ -47,7 +47,7 @@ const bestPackages = [
         id: 19,
         imgsrc: img19,
         desttitle: "Miami",
-        to: "USA",
+        location: "USA",
         packages: "9 days / 8 nights",
         originalPrice: "$2700",
         discountedPrice: "2200",
@@ -57,7 +57,7 @@ const bestPackages = [
         id: 20,
         imgsrc: img20,
         desttitle: "Maldives",
-        to: "Indian Ocean",
+        location: "Indian Ocean",
         packages: "9 days / 8 nights",
         originalPrice: "$2100",
         discountedPrice: "1700",
@@ -67,7 +67,7 @@ const bestPackages = [
         id: 21,
         imgsrc: img21,
         desttitle: "Kyoto",
-        to: "Japan",
+        location: "Japan",
         packages: "9 days / 8 nights",
         originalPrice: "$2500",
         discountedPrice: "2250",
@@ -88,7 +88,7 @@ const Packages = () => {
 
             <div className="secContent grid wow animate__animated animate__fadeInUp" data-wow-duration="3s" data-wow-delay="1s">
                 {
-                    bestPackages.map(({ id, imgsrc, desttitle, to, packages, originalPrice, discountedPrice, details }) => {
+                    bestPackages.map(({ id, imgsrc, desttitle, location, packages, originalPrice, discountedPrice, details }) => {
                         return (
                             <div key={id} className="singlePackage">
 
@@ -98,7 +98,7 @@ const Packages = () => {
                                 <div className="cardInfo">
                                     <h4 className='desttitle'>{desttitle}</h4>
                                     <span className="continent flex"><HiOutlineLocationMarker className='icon' />
-                                        <span className="name">{to}</span>
+                                        <span className="name">{location}</span>
                                     </span>
                                     <div className="packageDetails">
                                         <h5>Package: {packages}</h5>
@@ -111,8 +111,7 @@ const Packages = () => {
                                     <div className="desc">
                                         <p>{details}</p>
                                     </div>
-                                    {/* <Link to={`/packages/product/${id}`} className='btn flex'>BOOK NOW <HiOutlineClipboardCheck className='icon' /></Link> */}
-                                    <button onClick={() => addToCart({ id, imgsrc, title: desttitle, price: discountedPrice })} className='btn flex'>ADD TO CART <FaShoppingCart className ='icon' /> </button>
+                                    <button onClick={() => addToCart({ id, imgsrc, title: desttitle, price: discountedPrice })} className='btn flex'>ADD TO CART <FaShoppingCart className='icon' /> </button>
                                 </div>
                             </div>
                         )
@@ -124,3 +123,4 @@ const Packages = () => {
 }
 
 export default Packages;
+
