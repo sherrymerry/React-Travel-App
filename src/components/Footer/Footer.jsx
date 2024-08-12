@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
 
             <div className="secContent container">
-                <div className="contactDiv flex">
+                {/* <div className="contactDiv flex">
                     <div className="text wow animate__animated animate__fadeInUp" data-wow-duration="3s" data-wow-delay="3s">
                         <small>KEEP IN TOUCH</small>
                         <h2>Travel With Us</h2>
@@ -25,7 +25,7 @@ const Footer = () => {
                         <input type="text" placeholder='Enter Email Address' />
                         <button className='btn flex' type='submit'>SEND<FiSend className='icon' /></button>
                     </div>
-                </div>
+                </div> */}
                 <div className="footerCard flex">
                     <div className="footerIntro flex">
                         <div className="logoDiv">
@@ -111,7 +111,7 @@ const Footer = () => {
                             </li>
                             <li className="footerList flex">
                                 <FiChevronRight className='icon' />Oceania
-                            </li>                     
+                            </li>
                         </div>
                     </div>
 
@@ -119,7 +119,7 @@ const Footer = () => {
                         <small>BEST TRAVEL WEBSITE</small>
                         <small>Copyright Reserved @ Travel.com</small>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
