@@ -161,7 +161,6 @@ const Data = [
 
 const Main = ({ searchQuery }) => {
     const { addToCart } = useCart();
-
     const filteredData = Data.filter(
         ({ desttitle, location }) =>
             desttitle.toLowerCase().includes(searchQuery.toLowerCase()) ||

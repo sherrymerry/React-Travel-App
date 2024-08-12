@@ -1,4 +1,3 @@
-import React from "react";
 import './about.css';
 import { FaGlobe, FaMapMarkedAlt, FaPlane } from 'react-icons/fa';
 
