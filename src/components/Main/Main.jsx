@@ -1,3 +1,4 @@
+
 import './main.css'
 import { useCart } from '../contexts/CartContext';
 
@@ -166,14 +167,18 @@ const Main = ({ searchQuery }) => {
             desttitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
             location.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    
+
     return (
         <section className="main container section">
             <div className="sectitle">
                 <h3 className="title">Most Visited Destinations</h3>
             </div>
             <div className="secContent grid wow animate__animated animate__shakeY" data-wow-duration="3s" data-wow-delay="3s">
-            {
+                {filteredData.length === 0 ? (
+                    <div className="noResults">
+                        <p>No destinations found.</p>
+                    </div>
+                ) : (
                     filteredData.map(({ id, imgsrc, desttitle, location, grade, discountedPrice, description }) => (
                         <div key={id} className="singleDestination">
                             <div className="imageDiv">
@@ -202,7 +207,7 @@ const Main = ({ searchQuery }) => {
                             </div>
                         </div>
                     ))
-                }
+                )}
             </div>
         </section>
     );
