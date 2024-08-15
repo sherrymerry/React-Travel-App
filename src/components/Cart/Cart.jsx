@@ -1,13 +1,17 @@
-import { useNavigate } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
 import './cart.css';
+import Swal from 'sweetalert2';
 
 const Cart = () => {
     const { cartItems, removeFromCart, getTotal } = useCart();
-    const navigate = useNavigate();
 
-    const handleCheckout = () => {
-        navigate('/checkout');
+    const handleAlert = () => {
+        Swal.fire({
+            title: 'Success!',
+            text: 'Your packages has been booked!',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
     };
 
     return (
@@ -34,7 +38,7 @@ const Cart = () => {
                         <div className="total">
                             <h4>Total: ${getTotal()}</h4>
                         </div>
-                        <button onClick={handleCheckout} className="checkoutBtn">Proceed to Checkout</button>
+                        <button onClick={handleAlert} className="checkoutBtn">Book Package</button>
                     </div>
                 )}
             </div>
