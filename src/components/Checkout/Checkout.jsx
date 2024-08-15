@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './checkout.css';
+import Swal from 'sweetalert2';
 
 const Checkout = () => {
     const [formData, setFormData] = useState({
@@ -17,8 +18,13 @@ const Checkout = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleAlert = () => {
+        Swal.fire({
+            title: 'Success!',
+            text: 'Your packages has been booked!',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
     };
 
     return (
@@ -26,7 +32,7 @@ const Checkout = () => {
             <div className="sectitle">
                 <h3 className="title">Checkout</h3>
             </div>
-            <form onSubmit={handleSubmit} className="checkoutForm">
+            <form onSubmit={(e) => e.preventDefault()} className="checkoutForm">
                 <div className="formGroup">
                     <label htmlFor="name">Name:</label>
                     <input
@@ -70,13 +76,12 @@ const Checkout = () => {
                     >
                         <option value="creditCard">Credit Card</option>
                         <option value="paypal">PayPal</option>
-                        <option value="paypal">Pioneer</option>
-                        <option value="paypal">Skrill</option>
-                        <option value="paypal">Local Bank Transfer</option>
-
+                        <option value="pioneer">Pioneer</option>
+                        <option value="skrill">Skrill</option>
+                        <option value="localBank">Local Bank Transfer</option>
                     </select>
                 </div>
-                <button type="submit" className="submitBtn"> <a href="src/assets/thanks.png"> Place Order </a></button>
+                <button type="button" onClick={handleAlert} className="submitBtn">Book Package</button>
             </form>
         </section>
     );
