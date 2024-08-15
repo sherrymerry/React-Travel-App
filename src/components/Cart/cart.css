@@ -58,7 +58,7 @@
     font-size: 1.2rem;
     font-weight: bold;
 
-    span{
+    span {
         color: var(--Primary-color);
         font-size: 1rem;
     }
@@ -96,4 +96,19 @@
 
 .checkoutBtn:hover {
     background: var(--gradient-color);
+}
+
+@media screen and (max-width:500px) {
+    .cartItems {
+        display: flex;
+        font-size: 1rem;
+
+        .details {
+            font-size:15px;
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
 }
